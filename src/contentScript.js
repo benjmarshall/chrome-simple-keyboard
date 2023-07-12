@@ -208,6 +208,7 @@ function onKeyPressNumeric(button) {
 function performNativeKeyPress(element, keyCode) {
     element.dispatchEvent(new Event("keydown", { keyCode: keyCode, which: keyCode }));
     element.dispatchEvent(new Event("keypress", { keyCode: keyCode, which: keyCode }));
+    element.dispatchEvent(new Event("keyup", { keyCode: keyCode, which: keyCode }));
     element.dispatchEvent(new Event("input", { bubbles: true }));
     //element.dispatchEvent(new Event("change", { bubbles: true }));
 }
